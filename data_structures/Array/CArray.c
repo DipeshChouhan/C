@@ -36,12 +36,8 @@ void swap(CArray *array, int position1, int position2);
 CArray * getCArray(int size)
 {
 	CArray *array = (CArray *) malloc(sizeof(CArray));
-	array->array = (int *) malloc(sizeof(int) * size);
-	array->size = size;
-	int i;
-	for (i = 0; i < size; i++) {
-		array->array[i] = 0;
-	}
+	array->array = (int *) calloc(sizeof(int) * size);
+	array->size = size;}
 	return array;
 }
 
